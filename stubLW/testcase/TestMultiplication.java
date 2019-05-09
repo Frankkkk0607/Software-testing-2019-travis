@@ -74,7 +74,7 @@ public class TestMultiplication {
 		assertEquals(expectedANS, actualANS);
 	}
 
-	//@Test
+	@Test
 	public void testMultiplicationThreeNumberArrayList() {
 		int a = 7;
 		int b = 5;
@@ -92,7 +92,7 @@ public class TestMultiplication {
 		assertEquals(expectedANS, actualANS);
 	}
 
-	//@Test
+	@Test
 	public void testMultiplicationOneNumberArrayList() {
 		// Test one number multiplications, complete test coverage to 100%
 		// Here should init prepared answer

@@ -36,7 +36,11 @@ public class TestDeposit {
 		double expected = 0;
 
 		// when...
-
+		when(userA.depositAmount()).thenReturn(198178);
+		when(userA.depositInterest(anyInt())).thenReturn(0.03);
+		
+		when(userA.expireEra()).thenReturn("昭和");
+		when(userA.expireYear()).thenReturn(64);
 		Deposit deposit = new Deposit(1949);
 		String result = deposit.deposit(userA);
 		assertEquals("平成1年: " + (int) expected, result);
@@ -48,7 +52,11 @@ public class TestDeposit {
 		// 利率都是5%
 
 		// when...
-
+		when(userA.depositAmount()).thenReturn(18000);
+		when(userA.depositInterest(anyInt())).thenReturn(0.05);
+		
+		when(userA.expireEra()).thenReturn("平成");
+		when(userA.expireYear()).thenReturn(6);
 		Deposit deposit = new Deposit(1974);
 		String result = deposit.deposit(userA);
 		assertEquals("平成6年: 47759", result);
@@ -60,7 +68,11 @@ public class TestDeposit {
 		// 利率都是10%
 
 		// when...
-
+		when(userA.depositAmount()).thenReturn(40000);
+		when(userA.depositInterest(anyInt())).thenReturn(0.10);
+		
+		when(userA.expireEra()).thenReturn("大正");
+		when(userA.expireYear()).thenReturn(20);
 		Deposit deposit = new Deposit(1937);
 		String result = deposit.deposit(userA);
 		assertEquals("昭和20年: 85743", result);

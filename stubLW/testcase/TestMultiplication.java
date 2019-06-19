@@ -113,7 +113,7 @@ public class TestMultiplication {
 		// Here should init prepared answer
 
 		int a = 7;
-		int b = -5;
+		int b = 5;
 		int expectedANS = -35;
 		ArrayList<Integer> array = new ArrayList<Integer>(Arrays.asList(a));
 

@@ -55,7 +55,22 @@ public class TestMultiplication {
 
 		assertEquals(expectedANS, actualANS);
 	}
+	@Test
+	public void testMultiplicationWithStubMockitoAny() {
+		// Test two number multiplications
+		int a = 7;
+		int expectedANS = -1;
+		ArrayList<Integer> array = new ArrayList<Integer>(Arrays.asList(a));
 
+		Factorization factorizationStub = mock(Factorization.class);
+		when(factorizationStub.factorization(expectedANS)).thenReturn(array);
+		
+
+		Multiplication multiplication = new Multiplication();
+		int actualANS = multiplication.multiplicationWithFactorization(factorizationStub, expectedANS, false);
+
+		assertEquals(expectedANS, actualANS);
+	}
 	@Test
 	public void testMultiplicationWithStubMockitoAny() {
 		// Test two number multiplications

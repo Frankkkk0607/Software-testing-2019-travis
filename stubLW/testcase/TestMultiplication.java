@@ -56,7 +56,7 @@ public class TestMultiplication {
 		assertEquals(expectedANS, actualANS);
 	}
 	@Test
-	public void testMultiplicationWithStubMockitoAny() {
+	public void testMultiplicationWithStubMockitoAnyOne() {
 		// Test two number multiplications
 		int a = 7;
 		int expectedANS = -1;
